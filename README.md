@@ -1,8 +1,8 @@
 <h1 align="center">Zaid Diab</h1>
 
 <p align="center">
-  <strong>Junior Software & Systems Engineer</strong><br>
-  Backend, Embedded Linux, DevOps, and Edge AI systems
+  <strong>AI Engineer & Software Developer</strong><br>
+  AI agents, RAG pipelines, and LLM systems, built on solid software, DevOps, and Linux foundations
 </p>
 
 <p align="center">
@@ -15,175 +15,173 @@
 </p>
 
 ```text
-BUILD v2.0 - EDGE
+BUILD v3.0 - AGENTIC
 LOCATION  Stuttgart, Germany
-FOCUS     Embedded Linux / Edge AI / Backend / DevOps
-STATUS    Intern @ Porsche Digital - available from Sep/Oct 2026
-SIGNAL    Software that runs on real hardware, not just in notebooks
+FOCUS     AI Agents / RAG / LLM Systems / Software Engineering / DevOps
+STATUS    Open to full-time roles and freelance work - available now
+SIGNAL    AI workflows that actually run in production, not just in demos
 ```
 
 ## What I Build
 
-I build production-adjacent systems at the intersection of backend engineering,
-embedded Linux, DevOps automation, and applied AI.
+I build applied AI systems: agent workflows, retrieval and document-analysis
+pipelines, local LLM inference, LLM routing, and AI automation for real business
+processes.
 
-My strongest work is where software meets real hardware: CI/CD pipelines that
-deploy containerized services onto embedded Linux targets, OTA update mechanisms,
-real-time computer vision pipelines on edge devices, and backend systems that are
-designed to ship and keep running.
+I don't treat AI as a demo layer. I also build what surrounds the model: the
+backend, the evaluation and quality gates, the deployment path, and the Linux
+systems underneath. That is what turns a workflow into usable production
+software. My background in DevOps, embedded Linux, and edge AI at Porsche
+Digital is where that systems discipline comes from.
 
-I am a Computer Science graduate of the German-Jordanian University, with an
-exchange semester at Hochschule Trier focused on robotics, computer vision, and
-AI. I am currently based in Stuttgart, Germany, interning at Porsche Digital GmbH
-within Vehicle Solutions & Data.
+I am a Computer Science graduate of the German-Jordanian University (AI focus,
+June 2026), with an exchange semester at Hochschule Trier focused on robotics,
+computer vision, and AI. I completed my internship at Porsche Digital GmbH in
+Vehicle Solutions & Data in August 2026.
 
 ## Current Signal
 
 | Now | Details |
 | --- | --- |
-| Role | Intern, Vehicle Solutions & Data, Porsche Digital GmbH |
+| Role | AI Engineer & Software Developer, open to opportunities |
 | Based in | Stuttgart, Germany |
-| Availability | Available for full-time roles from September/October 2026 |
+| Availability | Available now for full-time roles; also open to freelance AI work |
 | Work authorization | Fiktionsbescheinigung through March 2027; Blue Card sponsorship eligible |
-| Independent build | EFQM/RADAR AI Report Analyzer for KACE |
-| Work style | Structured problem-solving, clear technical communication, real systems responsibility |
-| Relocation | Open to Germany, UAE, Saudi Arabia, Qatar, Jordan, and the Nordics |
+| Leading | EFQM/RADAR AI Report Analyzer: local-first multi-agent RAG, team of five |
+| Recently completed | Porsche Digital internship, October 2025 - August 2026 |
+| Relocation | Open to roles across Europe and the Middle East |
 
 ## Selected Work
 
+### [EFQM/RADAR AI Report Analyzer](https://zaiddiab.com/projects/efqm-radar-rag)
+
+A local-first multi-agent RAG pipeline for first-pass desk assessment of
+EFQM-based organizational self-assessment reports. I lead a five-person team
+that started with no prior experience in RAG, agent orchestration, or
+structured LLM output.
+
+- LangGraph section agents, Pydantic v2 contracts, Ollama, Qdrant, PyPDF,
+  RapidOCR, FastAPI, and Jinja2.
+- Runs on local LLMs, so sensitive organizational data stays on the workstation.
+- Evidence-linked findings with exact quotes, plus an opt-in supervised
+  multi-model route: an evaluator, an independent evidence checker, and a
+  supervisor that can only approve or stop the run.
+- Fail-closed governance: scores are withheld, never guessed, when evidence or
+  authoritative scoring rules are missing.
+- CI metrics for retrieval, grounding, citation coverage, schema validity, and
+  repeated-run stability. A 573-segment calibration run covering 38
+  guide items had zero retrieval or grounding failures.
+- The integrated team work reached 303 tests at 89.94% coverage. A later
+  autonomous implementation reached 1,360 tests at 87.48% coverage.
+- Built a seven-day onboarding program and a protected PR workflow with
+  explicit owners, acceptance criteria, and quality gates.
+
+Best fit: AI engineer, applied AI, LLM/RAG engineering, AI automation consulting.
+
+### [LLM Routing System](https://zaiddiab.com/projects/porsche-llm-routing)
+
+An internal AI tool I built at Porsche Digital. It is an intelligent routing
+layer that uses an on-device LLM to analyze each prompt's complexity and task
+type, then sends it to a local model or a cloud provider.
+
+- The routing decision itself runs entirely on local inference.
+- By my own operational estimate, about 65% of requests stayed local and cloud
+  AI spend fell by about 45%. These are self-reported figures, not a controlled
+  finance study.
+- Designed to be extended as new local and cloud models become available.
+
+Best fit: AI engineering, LLM systems, AI infrastructure, cost optimization.
+
+### [Agent Operations Dashboard](https://zaiddiab.com/projects/agent-operations-dashboard)
+
+A private, owner-only control surface for project health, GitHub issues and PRs,
+tasks, bounded Codex agent telemetry, alerts, and analytics.
+
+- Next.js and TypeScript on Vercel, with Supabase state, WebAuthn passkeys, and
+  an MCP worker on Cloudflare.
+- Local agent summaries arrive through an authenticated outbound Windows
+  service, so workstation access and sync credentials never reach the browser.
+
+Best fit: AI platform engineering, developer tooling, full-stack.
+
 ### [Vehicle Software Infrastructure](https://zaiddiab.com/projects/porsche-ci-cd-ota)
 
-CI/CD and deployment infrastructure for containerized applications on embedded
-Linux platforms across multiple hardware architectures.
+CI/CD and OTA infrastructure for containerized services on embedded Linux at
+Porsche Digital.
 
-- Built and maintained CI/CD pipelines for embedded Linux deployments.
-- Developed and deployed containerized backend services on custom embedded
-  hardware targets.
-- Implemented OTA update mechanics with version checks, fallback logic, health
+- CI/CD pipelines for Dockerized C++ and Python services across ARM and x86
+  targets.
+- A REST-based OTA update mechanism in Rust, which I taught myself on the job.
+  It ran on three test vehicles with version checks, fallback logic, health
   monitoring, and service orchestration.
-- Automated build, tagging, deployment, and update workflows across development
-  and target environments.
-- General details only; specific tools, languages, and architectures are under NDA.
 
 Best fit: DevOps, platform engineering, embedded Linux, automotive software.
 
 ### [Edge AI Computer Vision Prototype](https://zaiddiab.com/projects/porsche-edge-ai-cv)
 
-Real-time dashcam perception pipeline running locally on embedded edge hardware.
+A real-time dashcam perception pipeline that runs entirely on embedded edge
+hardware: a GStreamer pipeline with YOLO detection, producing video overlays and
+per-frame metadata that drove ambient light hazard feedback.
 
-- Built a modular GStreamer pipeline using YOLO for object detection.
-- Processed vehicles, pedestrians, and environmental elements with low latency
-  and no cloud dependency.
-- Implemented preprocessing, inference, post-processing, and output generation.
-- Produced both bounding-box video overlays and structured detection metadata.
-- Used metadata to drive simplified ambient visual feedback for nearby objects or
-  potential hazards.
-
-Best fit: computer vision, embedded AI, edge AI, automotive perception, robotics.
-
-### [EFQM/RADAR AI Report Analyzer for KACE](https://zaiddiab.com/projects/efqm-radar-rag)
-
-Independent agentic AI project for analyzing EFQM self-assessment reports. I am
-leading a team of five, coordinating task distribution, driving technical
-decisions, and teaching the team from scratch.
-
-- Uses local LLMs rather than external APIs for confidentiality.
-- Implements a RAG pipeline for structured document analysis.
-- Detects conflicts, inconsistencies, and gaps in report content.
-- Generates assessor-style reports based on RADAR scoring.
-- Can compare human assessor reports for quality assurance.
-
-Best fit: applied AI, LLM/RAG engineering, automation consulting.
-
-### [EUNO: ML-Based Mood Tracker](https://zaiddiab.com/projects/euno-mood-tracker)
-
-Graduation project: a machine-learning mood tracking application that predicts
-mood-streak continuations from historical emotional data.
-
-- Trained a Random Forest classifier with about 87% accuracy and ROC AUC 0.95.
-- Used SMOTE to handle class imbalance.
-- Compared Decision Tree, XGBoost, and Random Forest models.
-- Built a FastAPI backend for real-time predictions.
-- Built a Flutter app for mood data collection, visualization, and prediction
-  display.
-
-Collaborator: Jaser Quteshat. Supervisor: Dr. Ahmad Barghash.
-
-Best fit: AI/ML engineering, backend development, mobile, full-stack.
-
-### [Yoga Studio Management Platform](https://zaiddiab.com/projects/yoga-studio-platform)
-
-Full-stack studio management system with three integrated parts:
-
-- Flutter member app for booking, subscriptions, and scheduling.
-- React.js admin dashboard for classes, members, subscriptions, and analytics.
-- ASP.NET Core backend with REST APIs, RBAC, and MySQL relational schema.
-
-Best fit: backend engineering, full-stack development, C#/.NET, API development.
+Best fit: computer vision, edge AI, automotive perception, robotics.
 
 ## Project Matrix
 
 | Project | Stack / Domain | What it shows |
 | --- | --- | --- |
-| [Vehicle Software Infrastructure](https://zaiddiab.com/projects/porsche-ci-cd-ota) | CI/CD, embedded Linux, OTA, containers, automotive | Production-adjacent platform work on real targets |
-| [Edge AI Computer Vision Prototype](https://zaiddiab.com/projects/porsche-edge-ai-cv) | GStreamer, YOLO, computer vision, embedded Linux | Real-time perception on edge hardware |
-| [EFQM/RADAR AI Report Analyzer](https://zaiddiab.com/projects/efqm-radar-rag) | RAG, LLM agents, document analysis, local LLMs | Applied AI pipeline design and team leadership |
-| [Internal Technical Evaluation](https://zaiddiab.com/projects/porsche-nda-eval) | Research, benchmarking, internal reporting | Comparing tools and architectures under uncertainty |
-| [EUNO Mood Tracker](https://zaiddiab.com/projects/euno-mood-tracker) | Python, Random Forest, SMOTE, FastAPI, Flutter, SQLite, Firebase | End-to-end ML product delivery |
-| [Yoga Studio Management Platform](https://zaiddiab.com/projects/yoga-studio-platform) | Flutter, React.js, ASP.NET Core, MySQL, REST, RBAC | Multi-client full-stack system design |
-| [Autonomous Robotics System with YOLO + LiDAR](https://zaiddiab.com/projects/robotics-yolo-lidar) | YOLO, LiDAR, robotics, mapping, path planning | Sensor fusion and autonomous navigation logic |
-| [Automated Shopping / Retail Automation Prototype](https://zaiddiab.com/projects/retail-automation) | YOLO, camera systems, robotic arm | Closed-loop computer vision automation |
-| [Kotlin Driver/Admin Mobile App](https://zaiddiab.com/projects/kotlin-driver-admin) | Kotlin, Firebase Realtime Database, Material Design | Role-based mobile app with real-time data |
+| [EFQM/RADAR AI Report Analyzer](https://zaiddiab.com/projects/efqm-radar-rag) | LangGraph, RAG, Qdrant, Ollama, FastAPI, Pydantic | Multi-agent RAG with evidence grounding and team leadership |
+| [LLM Routing System](https://zaiddiab.com/projects/porsche-llm-routing) | Local LLM inference, Python, routing logic | Cost-aware hybrid local/cloud AI |
+| [Agent Operations Dashboard](https://zaiddiab.com/projects/agent-operations-dashboard) | Next.js, TypeScript, Supabase, WebAuthn, MCP | Tooling for operating AI agents |
+| [Vehicle Software Infrastructure](https://zaiddiab.com/projects/porsche-ci-cd-ota) | CI/CD, embedded Linux, Rust OTA, Docker | Production-adjacent platform work on real targets |
+| [Edge AI Computer Vision Prototype](https://zaiddiab.com/projects/porsche-edge-ai-cv) | GStreamer, YOLO, embedded Linux | Real-time perception on edge hardware |
+| [Internal Technical Evaluation](https://zaiddiab.com/projects/porsche-nda-eval) | LLM and hardware benchmarking, reporting | Comparing 10+ AI approaches under uncertainty |
+| [EUNO Mood Tracker](https://zaiddiab.com/projects/euno-mood-tracker) | Random Forest, SMOTE, FastAPI, Flutter | End-to-end ML product (~87% accuracy) |
+| [Yoga Studio Management Platform](https://zaiddiab.com/projects/yoga-studio-platform) | Flutter, React.js, ASP.NET Core, MySQL, RBAC | Deployed multi-client full-stack system |
+| [Robotics System with YOLO + LiDAR](https://zaiddiab.com/projects/robotics-yolo-lidar) | YOLO, LiDAR, mapping, path planning | Sensor fusion and autonomous navigation |
+| [Retail Automation Prototype](https://zaiddiab.com/projects/retail-automation) | YOLO, camera systems, robotic arm | Closed-loop computer vision automation |
+| [Kotlin Driver/Admin Mobile App](https://zaiddiab.com/projects/kotlin-driver-admin) | Kotlin, Firebase Realtime Database | Role-based mobile app with real-time sync |
 
 ## Stack
 
 | Area | Tools and technologies |
 | --- | --- |
-| AI / ML / Perception | YOLO, Random Forest, Computer Vision, LiDAR, GStreamer, SMOTE, RAG, LLM agents |
-| Backend & Systems | Python, C++, Rust, C#, ASP.NET Core, REST APIs, FastAPI |
-| DevOps & Platforms | Docker, CI/CD pipelines, Linux, embedded Linux, systemd, shell scripting, Git |
-| Frontend / Mobile | Flutter, React.js, Kotlin |
-| Databases | MySQL, Firebase Realtime Database, SQLite |
-| Daily environment | Linux, Windows, VS Code, Claude Code, ChatGPT Codex, Gemini, GitHub Copilot, OpenSpec |
-| Hardware context | ARM-based embedded boards, edge AI accelerators, LiDAR and camera rigs |
+| AI / ML & Agents | LLM agents, LangGraph, RAG, Qdrant, Ollama, local LLM inference, LLM routing, MCP, structured output (Pydantic), YOLO, computer vision |
+| Backend & Systems | Python, FastAPI, C++, Rust, C#, ASP.NET Core, REST APIs |
+| DevOps & Platforms | Docker, CI/CD, GitHub Actions, Linux, embedded Linux, systemd, Cloudflare, shell scripting, Git |
+| Frontend / Mobile | Next.js, TypeScript, React.js, Flutter, Kotlin |
+| Databases | SQLite, MySQL, Supabase/Postgres, Firebase Realtime Database |
+| Daily environment | Linux, Windows, VS Code, Claude Code, ChatGPT Codex, GitHub Copilot, OpenSpec |
 
 ## Experience
 
 ### Porsche Digital GmbH - Intern, Vehicle Solutions & Data
 
-October 2025 - present, Ludwigsburg, Germany
+October 2025 - August 2026, Ludwigsburg, Germany
 
-I work in a cross-functional engineering team following Scrum-based agile
-practices. I was given real responsibility from day one across vehicle software,
-embedded Linux, edge AI, and technical evaluation work.
+I worked as a full member of a cross-functional Scrum team across AI, vehicle
+software, and systems projects.
 
-Highlights:
-
-- Built CI/CD and deployment workflows for embedded Linux targets.
-- Worked on OTA update flow design, health monitoring, and service orchestration.
-- Developed real-time edge computer vision prototypes.
-- Participated in sprint planning, code reviews, and architectural discussions.
-- Recognized for high initiative, structured problem-solving, and clear technical
-  communication.
+- Built an intelligent LLM routing layer that runs on local inference.
+- Built CI/CD pipelines and a Rust OTA update mechanism for embedded Linux targets.
+- Developed a real-time edge computer vision prototype.
+- Benchmarked more than ten LLM approaches, AI tools, and hardware options for
+  a confidential early-stage project.
+- Recognized for high initiative, structured problem-solving, and clear
+  technical communication.
 
 ### Javna Mobile Media & Technology Solutions - Backend Development Intern
 
 June 2024 - July 2024, Amman, Jordan
 
-- Developed RESTful APIs using ASP.NET Core.
-- Designed relational data models and CRUD flows with Entity Framework Core and
-  MySQL.
-- Optimized API performance through query tuning, caching, and backend refactoring.
-- Worked with Git-based version control and code review workflows.
-- Collaborated with frontend and product teams to integrate backend systems with
-  user-facing features.
+- Developed RESTful APIs with ASP.NET Core, Entity Framework Core, and MySQL.
+- Improved API performance through query tuning, caching, and refactoring.
 
 ## Education
 
 | Program | Institution | Focus |
 | --- | --- | --- |
-| BSc Computer Science, 2021-2026 | German-Jordanian University, Amman | Artificial Intelligence, software engineering, web technologies |
-| Exchange Semester, 2025 | Hochschule Trier, Germany | Robotics, computer vision, artificial intelligence |
+| BSc Computer Science, 2021-2026 | German-Jordanian University, Amman | Artificial Intelligence |
+| Exchange Semester, 2025 | Hochschule Trier, Germany | Robotics, computer vision, AI |
 
 ## Languages
 
@@ -191,55 +189,40 @@ June 2024 - July 2024, Amman, Jordan
 | --- | --- |
 | Arabic | Native |
 | English | C2 - proficient |
-| German | B1 working proficiency, improving toward B2 |
+| German | B1+ working proficiency, improving toward B2 |
 
 ## Target Roles
 
-I am strongest as a junior software/systems engineer with focus on backend,
-embedded Linux, DevOps automation, and edge AI systems.
+1. AI Engineer / Applied AI Engineer / AI Agent Developer
+2. Software Engineer / Software Developer
+3. DevOps / Platform / CI/CD Engineer
+4. Backend Engineer
+5. Linux / Embedded Linux / Systems Engineer
 
-Primary roles:
-
-- Junior DevOps / Platform / CI-CD Engineer
-- Embedded Software / Embedded Linux / IoT Engineer
-- Backend Engineer, especially Python, C#/.NET, FastAPI, and API-heavy systems
-- Test Automation / Integration / HIL-SIL Engineer
-- Edge AI / Computer Vision Engineer
-
-Target industries:
-
-- Automotive and suppliers
-- Industrial automation and robotics
-- Logistics software
-- IT consultancies and engineering service providers
-- SaaS and startups
+Industries: AI automation and business workflows, automotive, industrial
+automation and robotics, logistics software, IT consultancies, SaaS and startups.
 
 ## What Makes Me Different
 
-The Porsche Digital internship gave me unusually practical systems exposure for a
-junior engineer. I have worked on CI/CD infrastructure for embedded Linux
-deployments, OTA update mechanics, and real-time computer vision on edge hardware.
-
-I do not only train models. I build the systems that run them. I do not only write
-APIs. I care about how they are deployed, updated, monitored, and operated on
-real targets.
+I combine AI engineering with software engineering, DevOps, backend, and Linux
+systems depth. I don't just write prompts. I build the agent workflows, retrieval
+pipelines, routing layers, evaluation gates, APIs, and deployment paths that make
+AI usable as production software.
 
 ## Reference Signal
 
 Dr. Ahmad Barghash, my academic supervisor at the German-Jordanian University,
-noted that I was in the top 5% of graduation project students he supervised and
-recommended me for consultation positions.
-
-Additional professional references are available on request.
+ranked me in the top 5% of graduation project students he has supervised and
+recommended me for consultation positions. Additional professional references
+are available on request.
 
 ## Contact
 
-I am open to full-time roles from September/October 2026, freelance projects, and
-technical collaborations.
+I'm open to full-time AI engineering and software roles, freelance work on AI
+automation, agents, and RAG, and technical collaborations.
 
 - Portfolio: <https://zaiddiab.com>
 - Projects: <https://zaiddiab.com/projects>
-- Experience: <https://zaiddiab.com/experience>
 - LinkedIn: <https://linkedin.com/in/zaiddiab>
 - Email: <contact@zaiddiab.com>
 - Resume: <https://zaiddiab.com/zaid-diab-cv.pdf>
