@@ -35,15 +35,47 @@ OPEN TO    Selected AI engineering roles, freelance AI work, collaborations
 
 ### Selected work
 
-Most of my work lives in private repositories, so each item links to a write-up instead.
+Most of my work lives in private repositories, so each card links to a write-up instead.
 
-| | Project | Proof |
-|---|---|---|
-| 🧠 | **[Private AI Operations System](https://zaiddiab.com/projects/private-ai-operations-system)**<br>Persistent agents, durable tasks, evidence-backed memory and approval-gated actions under one policy kernel. Local models do the work. | Python · FastAPI · SQLite/FTS5 · Ollama |
-| 📑 | **[EFQM/RADAR AI Report Analyzer](https://zaiddiab.com/projects/efqm-radar-rag)**<br>Local-first multi-agent RAG for evidence-backed desk assessment. Initial phase delivered: a 573-segment calibration run with zero retrieval or grounding failures. I led a team of five. | LangGraph · Pydantic · Qdrant · 1,360 tests |
-| 🔀 | **[LLM Routing System](https://zaiddiab.com/projects/porsche-llm-routing)**, Porsche Digital<br>An on-device LLM decides whether each prompt stays local or goes to the cloud. About 65% stayed local and cloud AI spend fell by about 45% (my own operational estimate). | Local inference · Python |
-| 🚗 | **[Vehicle Software & Edge AI](https://zaiddiab.com/projects/porsche-ci-cd-ota)**, Porsche Digital<br>CI/CD for embedded Linux, a Rust OTA updater on test vehicles, and a real-time YOLO + GStreamer dashcam pipeline. | Rust · Docker · GStreamer · YOLO |
-| 🛰️ | **[Agent Operations Dashboard](https://zaiddiab.com/projects/agent-operations-dashboard)**<br>An owner-only control surface for projects, PRs, agent telemetry and alerts. | Next.js · Supabase · WebAuthn · MCP |
+<a href="https://zaiddiab.com/projects/private-ai-operations-system">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/work-ops-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/work-ops-light.svg">
+    <img alt="Private AI Operations System: read the case study" src="assets/work-ops-dark.svg" width="100%">
+  </picture>
+</a>
+
+<a href="https://zaiddiab.com/projects/efqm-radar-rag">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/work-efqm-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/work-efqm-light.svg">
+    <img alt="EFQM/RADAR AI Report Analyzer: read the case study" src="assets/work-efqm-dark.svg" width="100%">
+  </picture>
+</a>
+
+<a href="https://zaiddiab.com/projects/porsche-llm-routing">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/work-router-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/work-router-light.svg">
+    <img alt="LLM Routing System at Porsche Digital: read the case study" src="assets/work-router-dark.svg" width="100%">
+  </picture>
+</a>
+
+<a href="https://zaiddiab.com/projects/porsche-ci-cd-ota">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/work-vehicle-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/work-vehicle-light.svg">
+    <img alt="Vehicle Software and Edge AI at Porsche Digital: read the case study" src="assets/work-vehicle-dark.svg" width="100%">
+  </picture>
+</a>
+
+<a href="https://zaiddiab.com/projects/agent-operations-dashboard">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/work-dashboard-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/work-dashboard-light.svg">
+    <img alt="Agent Operations Dashboard: read the case study" src="assets/work-dashboard-dark.svg" width="100%">
+  </picture>
+</a>
 
 ### Stack
 
