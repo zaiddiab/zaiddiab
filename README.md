@@ -25,24 +25,23 @@ BASE       Amman, Jordan · German work authorization through Mar 2027
 OPEN TO    Selected AI engineering roles, freelance AI work, collaborations
 ```
 
-### How I build
+### How I work
 
 ```mermaid
 flowchart TD
-    Q([Request]) --> R{{"LLM router · a local model scores the task"}}
-    R -->|simple or private| L["Local LLM · Ollama"]
-    R -->|complex| C["Cloud model"]
-    L --> A["Agents · durable tasks"]
-    C --> A
-    A <--> M[("Memory · SQLite + FTS5")]
-    A <--> K[("RAG · Qdrant + citations")]
-    A --> P{"Policy kernel"}
-    P -->|safe| O([Result])
-    P -->|external or destructive| H(["Human approval"])
-    H --> O
+    I([Idea or client problem]) --> S["Spec first · OpenSpec proposal, spec, design, tasks"]
+    S --> A{"I review and approve"}
+    A -->|approved| B["Build with AI agents · Claude Code + Codex, one task at a time"]
+    B --> G{"Quality gates · tests, lint, types, security, eval metrics"}
+    G -->|fail| B
+    G -->|pass| R["Protected PR · CI + review"]
+    R --> D["Ship · GitHub Actions deploy"]
+    D --> O["Operate · dashboard, alerts, telemetry"]
+    O --> L["Archive the spec · lessons feed the next one"]
+    L -.-> S
 ```
 
-<sub>Local first by default, cloud by exception. Evidence over vibes. Nothing irreversible runs without a human.</sub>
+<sub>I'm the architect and the reviewer. AI agents write much of the code, but inside specs and gates: nothing is built without an approved spec, and nothing merges without passing tests.</sub>
 
 ### Selected work
 
