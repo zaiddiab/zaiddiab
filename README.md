@@ -46,10 +46,9 @@ flowchart TD
     end
     subgraph D["4 · Deliver"]
         direction LR
-        H["Deploy"] --> DOC["Docs and handover"] --> O(["Support and improve"])
+        H["Deploy"] --> DOC["Docs and handover"] --> O(["Support, improve, next phase"])
     end
     U --> G --> B --> D
-    D -.->|next phase| U
 ```
 
 <sub>I start with the business, not the model. Every project begins with a conversation and a written, agreed scope. AI agents (Claude Code, Codex) speed up the build, while OpenSpec specs, quality gates (tests, evals, security) and review meetings keep it honest.</sub>
