@@ -28,16 +28,18 @@ OPEN TO    Selected AI engineering roles, freelance AI work, collaborations
 ### How I build
 
 ```mermaid
-flowchart LR
-    Q([Request]) --> R{{"LLM router<br/>local model scores the task"}}
-    R -- simple / private --> L["Local LLM<br/>Ollama"]
-    R -- complex --> C["Cloud model"]
-    L & C --> A["Agents<br/>durable tasks"]
-    A <--> M[("Memory<br/>SQLite · FTS5")]
-    A <--> K[("RAG<br/>Qdrant · citations")]
+flowchart TD
+    Q([Request]) --> R{{"LLM router · a local model scores the task"}}
+    R -->|simple or private| L["Local LLM · Ollama"]
+    R -->|complex| C["Cloud model"]
+    L --> A["Agents · durable tasks"]
+    C --> A
+    A <--> M[("Memory · SQLite + FTS5")]
+    A <--> K[("RAG · Qdrant + citations")]
     A --> P{"Policy kernel"}
-    P -- safe --> O([Result])
-    P -- external or destructive --> H(["Human approval"]) --> O
+    P -->|safe| O([Result])
+    P -->|external or destructive| H(["Human approval"])
+    H --> O
 ```
 
 <sub>Local first by default, cloud by exception. Evidence over vibes. Nothing irreversible runs without a human.</sub>
