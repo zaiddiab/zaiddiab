@@ -30,29 +30,29 @@ OPEN TO    Selected AI engineering roles, freelance AI work, collaborations
 ```mermaid
 flowchart TD
     subgraph U["1 · Understand"]
-        M(["Discovery meeting · goals, users, workflows, systems"]) --> A["Assess options, data and constraints"]
+        direction LR
+        M(["Discovery meeting"]) --> A["Goals, users, workflows, systems"] --> C["Options, data, constraints"]
     end
     subgraph G["2 · Agree"]
-        P["Proposal · scope, plan, acceptance criteria, cost"] --> OK{"Sign-off"}
+        direction LR
+        P["Proposal · scope, plan, cost"] --> AC["Acceptance criteria"] --> OK{"Sign-off"}
+        OK -.->|revise| P
     end
     subgraph B["3 · Build and validate"]
-        S["Spec first · OpenSpec tasks"] --> X["Build in stages with AI agents · Claude Code + Codex"]
-        X --> Q{"Quality gates · tests, evals, security"}
-        Q -->|fail| X
-        Q -->|pass| R["Review meeting · demo against the agreed requirements"]
-        R -->|changes| S
+        direction LR
+        S["Spec first"] --> X["Build with AI agents"] --> Q{"Quality gates"} --> R["Review meeting"]
+        Q -.->|fail| X
+        R -.->|changes| S
     end
     subgraph D["4 · Deliver"]
-        H["Deploy · docs · handover"] --> O["Support and improve"]
+        direction LR
+        H["Deploy"] --> DOC["Docs and handover"] --> O(["Support and improve"])
     end
-    A --> P
-    OK -->|revise| P
-    OK -->|agreed| S
-    R -->|accepted| H
-    O -.->|next phase| M
+    U --> G --> B --> D
+    D -.->|next phase| U
 ```
 
-<sub>I start with the business, not the model. Every project begins with a conversation and a written, agreed scope. AI agents speed up the build, while specs, quality gates and review meetings keep it honest.</sub>
+<sub>I start with the business, not the model. Every project begins with a conversation and a written, agreed scope. AI agents (Claude Code, Codex) speed up the build, while OpenSpec specs, quality gates (tests, evals, security) and review meetings keep it honest.</sub>
 
 ### Selected work
 
