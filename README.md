@@ -29,19 +29,30 @@ OPEN TO    Selected AI engineering roles, freelance AI work, collaborations
 
 ```mermaid
 flowchart TD
-    I([Idea or client problem]) --> S["Spec first · OpenSpec proposal, spec, design, tasks"]
-    S --> A{"I review and approve"}
-    A -->|approved| B["Build with AI agents · Claude Code + Codex, one task at a time"]
-    B --> G{"Quality gates · tests, lint, types, security, eval metrics"}
-    G -->|fail| B
-    G -->|pass| R["Protected PR · CI + review"]
-    R --> D["Ship · GitHub Actions deploy"]
-    D --> O["Operate · dashboard, alerts, telemetry"]
-    O --> L["Archive the spec · lessons feed the next one"]
-    L -.-> S
+    subgraph U["1 · Understand"]
+        M(["Discovery meeting · goals, users, workflows, systems"]) --> A["Assess options, data and constraints"]
+    end
+    subgraph G["2 · Agree"]
+        P["Proposal · scope, plan, acceptance criteria, cost"] --> OK{"Sign-off"}
+    end
+    subgraph B["3 · Build and validate"]
+        S["Spec first · OpenSpec tasks"] --> X["Build in stages with AI agents · Claude Code + Codex"]
+        X --> Q{"Quality gates · tests, evals, security"}
+        Q -->|fail| X
+        Q -->|pass| R["Review meeting · demo against the agreed requirements"]
+        R -->|changes| S
+    end
+    subgraph D["4 · Deliver"]
+        H["Deploy · docs · handover"] --> O["Support and improve"]
+    end
+    A --> P
+    OK -->|revise| P
+    OK -->|agreed| S
+    R -->|accepted| H
+    O -.->|next phase| M
 ```
 
-<sub>I'm the architect and the reviewer. AI agents write much of the code, but inside specs and gates: nothing is built without an approved spec, and nothing merges without passing tests.</sub>
+<sub>I start with the business, not the model. Every project begins with a conversation and a written, agreed scope. AI agents speed up the build, while specs, quality gates and review meetings keep it honest.</sub>
 
 ### Selected work
 
