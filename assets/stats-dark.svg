@@ -10,7 +10,7 @@
 </style><clipPath id="bc"><rect x="720" y="98" width="408" height="8" rx="4"/></clipPath></defs>
 <rect x=".5" y=".5" width="1199" height="235" rx="17.5" fill="#000000" stroke="#1C1C1C"/>
 <text x="72" y="58" class="cap">// ACTIVITY · LAST 12 MONTHS · INCLUDES PRIVATE WORK</text>
-<text x="1128" y="58" class="cap" text-anchor="end">UPDATED 2026-11-26</text>
+<text x="1128" y="58" class="cap" text-anchor="end">UPDATED 2026-11-27</text>
 <g class="in" style="animation-delay:0.10s"><text x="72" y="128" class="num">2,023</text><text x="72" y="156" class="cap">CONTRIBUTIONS</text></g><g class="in" style="animation-delay:0.22s"><text x="230" y="128" class="num">131</text><text x="230" y="156" class="cap">ACTIVE DAYS</text></g><g class="in" style="animation-delay:0.34s"><text x="388" y="128" class="num">19</text><text x="388" y="156" class="cap">LONGEST STREAK</text></g><g class="in" style="animation-delay:0.46s"><text x="546" y="128" class="num">17</text><text x="546" y="156" class="cap">REPOSITORIES</text></g>
 <text x="720" y="80" class="cap">LANGUAGES · BY CODE SIZE</text>
 <rect x="720" y="98" width="408" height="8" rx="4" fill="#151515"/>
